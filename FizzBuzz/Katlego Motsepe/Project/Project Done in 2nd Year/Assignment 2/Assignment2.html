@@ -1,0 +1,103 @@
+<!--Jandre Kruger
+Xillon Fick
+Frans John Coetzee
+Donovan VerHeij
+Katlego Ntsako Motsepe
+Lethabo Selabe-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group 18</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Validate_Empty_Fields.js"></script>
+    <script src="String_validate.js"></script>
+    <script src="Number.js"></script>
+    <script src="finalcheck.js"></script>
+    <script src="SticktForm.js"></script>
+    <script src="Summary.js"></script>
+
+</head>
+
+<body>
+    <form>
+        <header>
+            <h1 id="formHeader">Basic Details</h1>
+        </header>
+        <hr>
+        <section>
+            <div>
+                <label for="First-name" id="lb1">First name</label>
+
+                <label for="Last-name" id="lb1">Last name</label>
+
+                <input type="text" name="First-name" id="First Name" placeholder="Enter you first name" oninput="FirstName(Val_Element('First Name'))">
+
+                <input type="text" name="Last-name" id="Last Name" placeholder="Enter your last name" oninput="LastName(Val_Element('Last Name'))">
+
+            </div>
+            <div>
+                <label for="Email" id="lb1">Email ID</label>
+
+                <label for="User-ID" id="lb1">Your User ID</label>
+                
+                <input type="email" name="Email" id="Email ID" placeholder="Enter your email"  oninput="EmailCheck()">
+               <div id="Check Box" style="position:absolute; width: 20px; top: 26%;left: 41%; display: none;">
+                    <img style="width: 20px;" src="checkmark.png" alt="chk">
+                </div>
+                <input type="text" name="User-ID" id="User ID" placeholder="Enter your user ID" oninput="UserId(Val_Element('User ID'))">
+                
+
+            </div>
+            <div>
+                <label for="Country" id="lb1">Country</label>
+
+                <label for="State" id="lb2">State</label>
+
+                <label for="City" id="lb2">City</label>
+
+                <select name="County" id="C">
+                    <option selected="" value="Default">America</option>
+                    <option value="Africa">Africa</option>
+                    <option value="USA">USA</option>
+                    <option value=""></option>
+                </select>
+
+                <select name="Sates" id="SC">
+                    <option selected="" value="Default">California</option>
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="Kape">Kape</option>
+                    <option value="K-Z">K-Z</option>
+                </select>
+
+                <select name="City" id="SC">
+                    <option selected="" value="Default">New York</option>
+                    <option value="Springs">Springs</option>
+                    <option value="Brakpan">Brakpan</option>
+                    <option value="Potch">Potch</option>
+                </select>
+            </div>
+            <div>
+                <label for="Phone_number" id="lb1">Phone number</label>
+
+                <label for="Reference_code" id="lb1">Reference Code</label>
+
+                <input type="text" name="Phone_number" id="Phone Number" placeholder="Enter your phone number" oninput="phoneNumber()">
+
+                <input type="text" name="Reference_code" id="Reference Code" placeholder="Enter your reference code" oninput="ReferenceCode(Val_Element('Reference Code'))">
+            </div>
+        </section>
+        <hr>
+        <footer>
+            <button id="Reset">Reset all</button>
+            <input id="Button-Continue" type="submit" name="submit" value="Continue" onclick="return CheckEmptyField(['First Name','Last Name','Email ID','User ID','Phone Number','Reference Code']);Details()">
+        </footer>
+    </form>
+</body>
+
+</html>
